@@ -43,6 +43,10 @@ class Jogo {
         this.descricao = descricao;
         this.plataforma = plataforma;
         this.imgLink = imgLink;
+        this.id = this.generateID()
+    }
+    generateID(){
+        return Math.floor(Math.random()* 1000);
     }
 }
 
@@ -82,6 +86,9 @@ class ListaJogos {
         limparImputs();
         }
     }
+    removerJogos(id){
+        this.ListaJogosArray = this.ListaJogosArray.filter(jogo => jogo.id != id);
+    }
 }
 const ListaTeste = new ListaJogos();
 // console.log(ListaTeste);
@@ -115,12 +122,16 @@ function renderizarConteudo() {
         <p>Descrição: ${jogo.descricao}</p>
         <p>Plataforma: ${jogo.plataforma}</p>
         <img src ="${jogo.imgLink}" alt="${jogo.titulo}">
+        <button id="bb1" class="button" onclick="remover(${jogo.id})">Remover</button>
         </div>
         `;
         listaHTML.innerHTML += jogoDiv;
     });
 }
+function remover(id){
+    BibliotecaJogos.removerJogos(id)
 
+}
 function isURLValida(url) {
     if(url.match(/\.(jpeg|jpg|gif|png)$/) != null){
         return true;
