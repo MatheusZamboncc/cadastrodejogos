@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de jogos</title>
+    <script src="assets/javascript/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.index.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2 id="titulo-principal">Cadastrar Jogos</h2>
+        <div id="container-inputs">
+            <label for="text">Titulo</label>
+            <input type="text" id="input-titulo" name="input-titulo" class="inputs">
+
+            <label for="input-preco">Preço</label>
+            <input type="number" id="input-preco" name="input-preco" class="inputs">
+
+            <label for="input-preco">Descrição</label>
+            <input type="text" id="input-descricao" name="input-descricao" class="inputs">
+            
+            <label for="input-preco">Plataforma</label>
+            <input type="text" id="input-plataforma" name="input-plataforma" class="inputs">
+
+            <label for="input-preco">Link da imagem</label>
+            <input type="text" id="input-imgLink" name="input-img-Link" class="inputs">
+
+            <div id="msg"></div>
+            <button id="botao-CriarJogo" class="button" onclick="comporJogo()">Adicionar Jogo</button>
+        </div>
+    </div>
+    <h2>Lista De Jogos</h2>
+    <div class="container-lista">
+        <div id="gameList" class="game-list"></div>
+    </div>
+</body>
+</html>
