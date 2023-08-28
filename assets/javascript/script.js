@@ -25,7 +25,7 @@ function verificarInputs() {
 
 function envieMsg(msg, tipoMsg) {
     let msgDiv = document.getElementById("msg");
-    msgDiv.innerHTML = '';
+    msgDiv.innerHTML = "";
 
     let msgParaTela = `
     <p class = "${tipoMsg}">${msg}</p>
@@ -128,10 +128,8 @@ function renderizarConteudo() {
         listaHTML.innerHTML += jogoDiv;
     });
 }
-function remover(id){
-    BibliotecaJogos.removerJogos(id)
 
-}
+
 function isURLValida(url) {
     if(url.match(/\.(jpeg|jpg|gif|png)$/) != null){
         return true;
@@ -140,4 +138,6 @@ function isURLValida(url) {
     }
 }
 
-
+function remover(id){
+    BibliotecaJogos.removerJogos(id)
+}
